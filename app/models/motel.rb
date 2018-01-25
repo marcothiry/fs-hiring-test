@@ -5,4 +5,5 @@ class Motel < ActiveResource::Base
   has_many :rooms
   has_many :bookings
 
+
 end
