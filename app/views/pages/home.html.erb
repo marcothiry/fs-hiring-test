@@ -1,0 +1,9 @@
+
+
+
+WELCOME!
+<ul>
+<% @motels.each do |motel| %>
+<li><%= motel.id %>--<%= motel.name %>--<%= motel.logo %></li>
+<% end %>
+</ul>
