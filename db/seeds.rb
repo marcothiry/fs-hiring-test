@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-User.create(email: nirvana@motel.com, password: "azerty", motel_id: "24")
-User.create(email: nirvana@motel.com, password: "azerty", motel_id: "42")
-User.create(email: nirvana@motel.com, password: "azerty", motel_id: "24")
+User.create(email: "nirvana@motel.com", password: "azerty", motel_id: 24)
+User.create(email: "beatles@motel.com", password: "azerty", motel_id: 42)
+User.create(email: "desserts@motel.com", password: "azerty", motel_id: 200)
