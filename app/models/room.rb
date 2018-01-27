@@ -4,7 +4,4 @@ class Room < ActiveResource::Base
   self.element_name = 'rooms'
   belongs_to :motel
   has_many :bookings
-
-
-
 end

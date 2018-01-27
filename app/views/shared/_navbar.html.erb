@@ -1,0 +1,36 @@
+<div class="navbar">
+  <!-- Logo -->
+  <a href="/" class="navbar-brand">
+    <div> <%= image_tag("logo.svg") %>
+    Luvotels
+    </div>
+  </a>
+  <!-- Right Navigation -->
+
+  <% if user_signed_in? %>
+    <div class="navbar-right hidden-xs hidden-sm">
+      <%= link_to "Mon compte", users_show_path(current_user) %>
+      <div class="navbar-item navbar-link">Bonjour <%= current_user.email %> ! <br>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Déconnexion") %>
+        <% end %>
+
+      </div>
+    </div>
+  <% else %>
+    <div class="navbar-right hidden-xs hidden-sm">
+      <%= link_to "S'inscrire", new_user_registration_path %>
+      <%= link_to "Se connecter", user_session_path %>
+    </div>
+  <% end %>
+    <!-- Dropdown appearing on mobile only -->
+    <div class="navbar-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+          <%= link_to "S'enregistrer", new_user_registration_path %>
+          <%= link_to "Se connecter", user_session_path %>
+        </ul>
+      </div>
+    </div>
+</div>
