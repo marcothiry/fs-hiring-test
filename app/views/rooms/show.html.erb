@@ -1,1 +1,14 @@
 ROOM SHOW
+
+
+<%= @room %>
+_______
+_______
+_______
+<ul>
+<% @bookings.each do |x| %>
+  <li><%= x.booking_code %></li>
+<% end %>
+</ul>
+
+

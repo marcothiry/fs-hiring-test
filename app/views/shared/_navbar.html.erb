@@ -1,16 +1,14 @@
 <div class="navbar">
   <!-- Logo -->
-  <a href="/" class="navbar-brand">
-    <div> <%= image_tag("logo.svg") %>
-    Luvotels
-    </div>
-  </a>
+  <%= link_to root_path do %>
+   <%= image_tag "logo.svg", class: "logo" %>
+  <% end %>
   <!-- Right Navigation -->
 
   <% if user_signed_in? %>
     <div class="navbar-right hidden-xs hidden-sm">
       <%= link_to "Mon compte", users_show_path(current_user) %>
-      <div class="navbar-item navbar-link">Bonjour <%= current_user.email %> ! <br>
+      <div class="navbar-item navbar-link">Óla <%= current_user.email %> ! <br>
         <%= link_to destroy_user_session_path, method: :delete do %>
           <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Déconnexion") %>
         <% end %>

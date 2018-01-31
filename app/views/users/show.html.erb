@@ -1,15 +1,26 @@
 
-
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
-<%= @sales %>
-<%= @fees %>
-
-<%= @motel %>
+<div class="user-dashboard-header">
+<h1>R$ <%= '%.2f' % @sales_brl %></h1>
+<h3><%= @bookings.count %> <span id="user-dashboard-header-bookings"> bookings</span></h3>
+</div>
 
 
-<%= @rooms %>
 
-
-<%= @bookings %>
+<div class="container">
+  <div class="row">
+    <% @rooms.each do |room| %>
+      <div class="board col-xs-12 col-md-4 col-lg-4">
+        <div class="dashboard ">
+          <div class="dashboard-body">
+            <ul>
+              <li>Total Sales: $<%= @sales_brl %> </li>
+              <li>Nb bookings: <%= @bookings.count %> </li>
+              <li>Average fees: <%= @average_fee_percent %>% </li>
+              <li>Revenue: $<%= @revenue %> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
