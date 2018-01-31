@@ -5,7 +5,7 @@
   text-align: center;
   background-color: $orange;
   position: absolute;
-  top : 0%;
+  top : 45px;
   left: 0%;
   right: 0%;
   height: 155px;
@@ -17,6 +17,14 @@
     h3 {
       margin-top: 0;
     }
+}
+
+.dashboard-container {
+  position: absolute;
+  top: 170px;
+  left: 0%;
+  right: 0%;
+
 }
 
 .dashboard {

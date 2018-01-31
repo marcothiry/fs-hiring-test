@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-- WIP / UNDER DEVELOPMENT --
 
-Things you may want to cover:
+Building a User Dashboard for Luvotels Motel Managers
 
-* Ruby version
+* Versions
+ruby 2.3.5p376
+Rails 5.1.4
 
 * System dependencies
+Devise
+Pundit
+Capybara / Rspec
+
 
 * Configuration
 
+
+
 * Database creation
+Using Luvotels API
+luvotels-hiring-api.herokuapp.com
+https://luvotels-hiring-api.herokuapp.com/motels.json
+https://luvotels-hiring-api.herokuapp.com/motels/:motel_id:/rooms.json
+https://luvotels-hiring-api.herokuapp.com/motels/:motel_id:/bookings.json
 
-* Database initialization
+Added USER table through SQLite & connected all models via ActiveResource
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+* Users for test:
+1- email: "nirvana@motel.com", password: "azerty"
+2- email: "beatles@motel.com", password: "azerty"
+3- email: "desserts@motel.com", password: "azerty"
 
-* Deployment instructions
 
-* ...
